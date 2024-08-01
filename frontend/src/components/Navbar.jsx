@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Box, Flex, Image, Link, List, ListItem, IconButton } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import logo from '../img/surajlokhande-removebg-preview.png';
-import './css/Navabar.css'; // Import the CSS file
+import './css/Navabar.css'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@ const Navbar = () => {
     <Flex
       as="nav"
       align="center"
-      justify="space-between"
+      justify="flex-end"
       wrap="wrap"
       p={2}
       bg="black"
@@ -25,9 +25,9 @@ const Navbar = () => {
       h="60px"
       zIndex="10"
     >
-      <Flex align="center">
+      {/* <Flex align="center">
         <Image src={logo} alt="Logo" h="50px" />
-      </Flex>
+      </Flex> */}
 
       <Box display={{ base: 'block', md: 'none' }} onClick={toggleMenu}>
         <IconButton
@@ -92,7 +92,8 @@ const Navbar = () => {
             <Link
               className="nav-link projects"
               href="#project"
-              onClick={closeMenu}
+              // onClick={closeMenu}
+              download
             >
               Projects
             </Link>
@@ -109,8 +110,9 @@ const Navbar = () => {
           <ListItem marginX="1rem" marginY={{ base: '1rem', md: 0 }}>
             <Link
               className="resume-link"
-              href="https://drive.google.com/file/d/1XzugLXcDQD0-j3herrM7OTTfnnqEbCTX/view?usp=sharing"
+              href="https://drive.google.com/file/d/1mU1yZXeEddyMy2XvVShU0kOQNHRukOnz/view?usp=drive_link"
               target="_blank"
+              isExternal
               onClick={closeMenu}
             >
               Resume

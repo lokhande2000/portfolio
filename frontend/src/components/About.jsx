@@ -70,7 +70,7 @@ const About = () => {
             
           </Text>
           <Text id="user-detail-intro" marginTop="1rem">
-            Hey There I am Suraj Lokhande... a hardworking and highly efficient
+            Hey There I am Suraj Lokhande. A hardworking and highly efficient
             web developer with sound knowledge in full stack technology and
             hands-on practice in Data Structure and Algorithms. Curious about
             modern web technology. Interested in learning technical things.

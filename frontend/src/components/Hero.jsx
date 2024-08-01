@@ -47,17 +47,20 @@ const Hero = () => {
     <Box id="home" className="hero" padding="2rem" textAlign="center">
       <Box className="center">.</Box>
       <Box className="main">
-        <Text className="my" fontSize="xl">
+        {/* <Text className="my" fontSize="xl">
           Hi 👋 my name is
-        </Text>
+        </Text> */}
         <Heading className="name" as="h2" size="2xl">
-          Suraj Lokhande
+          Hello
+        </Heading>
+        <Heading className="name" as="h2" size="xl">
+          I am Suraj Lokhande
         </Heading>
         <HStack fontSize="xl">
-          <Heading as="h3" size="lg" color="#fff">
+          {/* <Heading as="h3" size="lg" color="#fff">
             And I am a
-          </Heading>
-          <Heading as="h3" size="lg" color="red" className="red second-text">
+          </Heading> */}
+          <Heading as="h3" size="lg" mt={4} color="red" className="red second-text">
             {typEffect}
           <Cursor cursorColor="red"/>
           </Heading>
@@ -66,7 +69,7 @@ const Hero = () => {
           id="resume-button-2"
           className="resume-link-2"
           as={Link}
-          href="https://drive.google.com/file/d/1XzugLXcDQD0-j3herrM7OTTfnnqEbCTX/view?usp=sharing"
+          href="https://drive.google.com/file/d/1mU1yZXeEddyMy2XvVShU0kOQNHRukOnz/view?usp=drive_link"
           isExternal
           marginTop="2rem"
         >
