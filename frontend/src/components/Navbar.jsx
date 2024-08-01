@@ -92,8 +92,7 @@ const Navbar = () => {
             <Link
               className="nav-link projects"
               href="#project"
-              // onClick={closeMenu}
-              download
+              onClick={closeMenu}
             >
               Projects
             </Link>
