@@ -12,6 +12,7 @@
   
   .nav-link:hover::after {
     content: "";
+    text-decoration: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -37,8 +38,6 @@
   }
   
   .resume-link {
-    py: 2;
-    px: 4;
     border-radius: md;
     color: white;
     text-decoration: none;
@@ -47,7 +46,7 @@
   
   .resume-link:hover {
     color: red;
-    background-color: #333;
+    background-color: #222;
     text-decoration: none;
   }
   

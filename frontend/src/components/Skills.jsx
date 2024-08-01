@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, SimpleGrid, Text, Image, VStack, HStack } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, Text, Image, VStack, HStack, Flex } from '@chakra-ui/react';
 import java from "../img/java.png"
 
 const skills = [
@@ -29,12 +29,15 @@ const Skills = () => {
       </Heading>
       <SimpleGrid columns={{ base: 1, sm:2, md: 3, lg: 4 }} spacing={15}>
         {skills.map((skill, index) => (
-          <HStack rounded='xl' key={index} align='center' justify='center' gap={12} className="skills-card" bg='#222' p={4}>
+          <SimpleGrid columns={2} alignItems='center' justifyItems='flex-start' rounded='xl' key={index}  className="skills-card" bg='#222' p={4}>
+            <Flex alignItems='center' justifyContent='center' width={'100%'}>
+
             <Image src={skill.image} alt={skill.name} className="skills-card-img" w={10}/>
+            </Flex>
             <Text className="skills-card-name" color='#fff' fontSize="lg" >
               {skill.name}
             </Text>
-          </HStack>
+          </SimpleGrid>
         ))}
       </SimpleGrid>
     </Box>

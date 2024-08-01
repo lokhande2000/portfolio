@@ -66,6 +66,7 @@ const Navbar = () => {
               className="nav-link home"
               href="#home"
               onClick={closeMenu}
+              _hover={{textDecoration: 'none'}}
             >
               Home
             </Link>
@@ -75,6 +76,7 @@ const Navbar = () => {
               className="nav-link about"
               href="#about"
               onClick={closeMenu}
+              _hover={{textDecoration: 'none'}}
             >
               About
             </Link>
@@ -84,6 +86,7 @@ const Navbar = () => {
               className="nav-link skills"
               href="#skill"
               onClick={closeMenu}
+              _hover={{textDecoration: 'none'}}
             >
               Skills
             </Link>
@@ -93,6 +96,7 @@ const Navbar = () => {
               className="nav-link projects"
               href="#project"
               onClick={closeMenu}
+              _hover={{textDecoration: 'none'}}
             >
               Projects
             </Link>
@@ -102,6 +106,7 @@ const Navbar = () => {
               className="nav-link contact"
               href="#contactus"
               onClick={closeMenu}
+              _hover={{textDecoration: 'none'}}
             >
               Contact
             </Link>
@@ -113,6 +118,7 @@ const Navbar = () => {
               target="_blank"
               isExternal
               onClick={closeMenu}
+              _hover={{textDecoration: 'none'}}
             >
               Resume
             </Link>

@@ -72,6 +72,7 @@ const Hero = () => {
           href="https://drive.google.com/file/d/1mU1yZXeEddyMy2XvVShU0kOQNHRukOnz/view?usp=drive_link"
           isExternal
           marginTop="2rem"
+          _hover={{textDecoration: "none", backgroundColor:'blue'}}
         >
           Resume
         </Button>
