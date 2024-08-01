@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect,  useState } from "react";
 import { Typewriter, Cursor, useTypewriter } from "react-simple-typewriter";
+import LoadingBar from 'react-top-loading-bar'
+
 import {
   Box,
   Heading,
@@ -45,6 +47,7 @@ const Hero = () => {
 
   return (
     <Box id="home" className="hero" padding="2rem" textAlign="center">
+
       <Box className="center">.</Box>
       <Box className="main">
         {/* <Text className="my" fontSize="xl">
@@ -76,6 +79,7 @@ const Hero = () => {
         >
           Resume
         </Button>
+        
       </Box>
     </Box>
   );
