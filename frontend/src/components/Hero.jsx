@@ -1,16 +1,7 @@
-import React, { useEffect,  useState } from "react";
-import { Typewriter, Cursor, useTypewriter } from "react-simple-typewriter";
-import LoadingBar from 'react-top-loading-bar'
+import { useEffect, useState } from "react";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
-import {
-  Box,
-  Heading,
-  Text,
-  Button,
-  Link,
-  Flex,
-  HStack,
-} from "@chakra-ui/react";
+import { Box, Heading, Button, HStack } from "@chakra-ui/react";
 
 const Hero = () => {
   const [role, setRole] = useState("");
@@ -23,7 +14,7 @@ const Hero = () => {
     ],
     loop: {},
     typeSpeed: 100,
-    delaySpeed: 40
+    delaySpeed: 40,
   });
 
   useEffect(() => {
@@ -47,7 +38,6 @@ const Hero = () => {
 
   return (
     <Box id="home" className="hero" padding="2rem" textAlign="center">
-
       <Box className="center">.</Box>
       <Box className="main">
         {/* <Text className="my" fontSize="xl">
@@ -63,23 +53,42 @@ const Hero = () => {
           {/* <Heading as="h3" size="lg" color="#fff">
             And I am a
           </Heading> */}
-          <Heading as="h3" size="lg" mt={4} color="red" className="red second-text">
+          <Heading
+            as="h3"
+            size="lg"
+            mt={4}
+            color="red"
+            className="red second-text"
+          >
             {typEffect}
-          <Cursor cursorColor="red"/>
+            <Cursor cursorColor="red" />
           </Heading>
         </HStack>
+
         <Button
-          id="resume-button-2"
-          className="resume-link-2"
-          as={Link}
-          href="https://drive.google.com/file/d/1mU1yZXeEddyMy2XvVShU0kOQNHRukOnz/view?usp=drive_link"
-          isExternal
-          marginTop="2rem"
-          _hover={{textDecoration: "none", backgroundColor:'blue'}}
+          className="resume-link"
+          mt={2}
+          onClick={(e) => {
+            e.preventDefault();
+
+            // Open the file in a new tab
+            window.open(
+              "https://drive.google.com/file/d/1mU1yZXeEddyMy2XvVShU0kOQNHRukOnz/view?usp=sharing",
+              "_blank",
+              "noopener,noreferrer"
+            );
+
+            // Create a link element for downloading
+            const downloadLink = document.createElement("a");
+            downloadLink.href =
+              "https://drive.google.com/uc?export=download&id=1mU1yZXeEddyMy2XvVShU0kOQNHRukOnz";
+            downloadLink.download = "Resume.pdf";
+            downloadLink.click();
+          }}
+          _hover={{ textDecoration: "none", backgroundColor: "blue" }}
         >
           Resume
         </Button>
-        
       </Box>
     </Box>
   );

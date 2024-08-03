@@ -6,29 +6,29 @@ import {
   List,
   ListItem,
   IconButton,
+  Button,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import "./css/Navabar.css";
 import LoadingBar from "react-top-loading-bar";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const handleClick = () =>{
-    ref.current.staticStart()
-    setIsOpen(false)
-    setTimeout(()=>{
-      ref.current.complete()
+  const handleClick = () => {
+    ref.current.staticStart();
+    setIsOpen(false);
+    setTimeout(() => {
+      ref.current.complete();
+    }, 200);
+  };
 
-    },200)
-  }
   const closeMenu = () => setIsOpen(false);
-  const ref = useRef(null)
 
   return (
-
     <>
       <LoadingBar color="red" ref={ref} />
 
@@ -45,10 +45,6 @@ const Navbar = () => {
         h="60px"
         zIndex="10"
       >
-        {/* <Flex align="center">
-        <Image src={logo} alt="Logo" h="50px" />
-      </Flex> */}
-
         <Box display={{ base: "block", md: "none" }} onClick={toggleMenu}>
           <IconButton
             icon={isOpen ? <CloseIcon zIndex={10} /> : <HamburgerIcon />}
@@ -131,17 +127,35 @@ const Navbar = () => {
                 Contact
               </Link>
             </ListItem>
+
             <ListItem marginX="1rem" marginY={{ base: "1rem", md: 0 }}>
-              <Link
+              <Button
                 className="resume-link"
-                href="https://drive.google.com/file/d/1mU1yZXeEddyMy2XvVShU0kOQNHRukOnz/view?usp=drive_link"
-                target="_blank"
-                isExternal
-                onClick={closeMenu}
+                bg="red"
+                color="#fff"
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  // Open the file in a new tab
+                  window.open(
+                    "https://drive.google.com/file/d/1mU1yZXeEddyMy2XvVShU0kOQNHRukOnz/view?usp=sharing",
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+
+                  // Create a link element for downloading
+                  const downloadLink = document.createElement("a");
+                  downloadLink.href =
+                    "https://drive.google.com/uc?export=download&id=1mU1yZXeEddyMy2XvVShU0kOQNHRukOnz";
+                  downloadLink.download = "Resume.pdf";
+                  downloadLink.click();
+
+                  closeMenu();
+                }}
                 _hover={{ textDecoration: "none" }}
               >
                 Resume
-              </Link>
+              </Button>
             </ListItem>
           </List>
         </Box>

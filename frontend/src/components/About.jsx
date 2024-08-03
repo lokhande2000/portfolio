@@ -66,8 +66,10 @@ const About = () => {
             Suraj Lokhande
           </Heading>
           <Text fontSize="lg">
-            And I'm a <span className="text absulate">{typEffect} <Cursor cursorColor="red" /></span>{" "}
-            
+            And I'm a{" "}
+            <span className="text absulate">
+              {typEffect} <Cursor cursorColor="red" />
+            </span>{" "}
           </Text>
           <Text id="user-detail-intro" marginTop="1rem">
             Hey There I am Suraj Lokhande. A hardworking and highly efficient
