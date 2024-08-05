@@ -109,6 +109,16 @@ const Navbar = () => {
             </ListItem>
             <ListItem marginX="1rem" marginY={{ base: "1rem", md: 0 }}>
               <Link
+                className="nav-link skills"
+                href="#github"
+                onClick={handleClick}
+                _hover={{ textDecoration: "none" }}
+              >
+                Github Stats
+              </Link>
+            </ListItem>
+            <ListItem marginX="1rem" marginY={{ base: "1rem", md: 0 }}>
+              <Link
                 className="nav-link projects"
                 href="#project"
                 onClick={handleClick}

@@ -6,17 +6,37 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import GithubCalendar from "./components/GithubCalender";
+import { useEffect, useState } from "react";
+import Loading from "./components/Loading";
 
 function App() {
+  const [loading, setloading] = useState(true);
+
+  useEffect(() => {
+    function isloading() {
+      setTimeout(() => {
+        setloading(false);
+      }, 1000);
+    }
+    isloading();
+  }, []);
   return (
-    <Box>
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </Box>
+    <>
+      {loading ? (
+        <Loading />
+      ) : (
+        <Box>
+          <Navbar />
+          <Hero />
+          <About />
+          <Skills />
+          <GithubCalendar />
+          <Projects />
+          <Contact />
+        </Box>
+      )}
+    </>
   );
 }
 
