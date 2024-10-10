@@ -210,8 +210,8 @@ nav .menulist{
    font-size: 2rem;
 }
 .name {
-   color: #4D2ABA;
-   color: #ddd;
+   /* color: #4D2ABA;
+   color: #ddd; */
    
    font-size: 5rem;
 }
