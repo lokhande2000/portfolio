@@ -10,22 +10,23 @@ import {
   Button,
   HStack,
 } from "@chakra-ui/react";
-import bigbasket from "../img/bigbasketclone.png";
+// import bigbasket from "../img/bigbasketclone.png";
+import onemg from "../img/1mghomepage.png"
 import ajio from "../img/ajioclone.png";
 import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    name: "bigbasket.com clone",
+    name: "1mg.com",
     description:
-      "A web application to buy groceries online. We have implemented some of the features of the website and added some extra functionalities",
-    techStack: "HTML | CSS | JavaScript",
-    image: bigbasket,
-    repoLink: "https://github.com/lokhande2000/bigbasketclone",
-    liveLink: "https://superb-medovik-e46505.netlify.app/",
+      "1mg.com is a comprehensive online healthcare platform offering medicines, lab tests, doctor consultations, and health products with doorstep delivery.",
+    techStack: "MongoDB | Express | React | NodeJS | Chakra-ui",
+    image: onemg,
+    repoLink: "https://github.com/lokhande2000/1mg.com_clone",
+    liveLink: "https://1mg-com-clone.vercel.app/",
   },
   {
-    name: "Ajio.com clone",
+    name: "Ajio.com",
     description:
       "Ajio is an online shopping plateform with mainly clothings, footware and other accessories. The main sections of the app are Home page, Products page.",
     techStack: "HTML | CSS | JavaScript",
