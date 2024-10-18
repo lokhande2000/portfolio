@@ -31,7 +31,7 @@ const projects = [
     techStack: "HTML | CSS | JavaScript",
     image: ajio,
     repoLink: "https://github.com/lokhande2000/AJIO-clone",
-    liveLink: "https://ajio-clone-gamma.vercel.app/",
+    liveLink: "https://ajio-clone-eight.vercel.app/",
   },
 ];
 
